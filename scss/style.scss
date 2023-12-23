@@ -1,0 +1,255 @@
+@use "variables";
+@use "reset";
+@use "layout";
+@use "util";
+
+// Desktop styles
+header {
+    margin-block-start: 4rem;
+    margin-block-end: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        gap: 2.5rem;
+
+        &__item {
+
+            &--link  {
+                text-decoration: none;
+                color: var(--c-gray);
+                font-size: var(--f-body);
+                transition: 0.1s ease-in-out;
+
+                &:hover {
+                    color: var(--c-red);
+                }
+            }
+        }
+    }
+
+    .bx {
+        display: none;
+    }
+}
+
+// CSS for mobile version
+@media (width < 740px) {
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    .logo {
+        width: 45px;
+        height: auto;
+    }
+
+    i {
+        font-size: 3rem;
+    }
+
+    // Navigation styles
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        background-color: var(--c-white);
+        z-index: 9;
+
+        & .bx-x {
+            position: absolute;
+            right: 0;
+            font-size: 3rem;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            padding-left: 2rem;
+            flex-direction: column;
+            gap: 2rem;
+            position: absolute;
+            top: 9rem;
+
+            &__item {
+
+                &--link {
+                    text-decoration: none;
+                    color: var(--c-blue);
+                }
+            }
+        }
+    }
+
+    .bx {
+        display: block;
+        cursor: pointer;
+    }
+}
+}
+
+
+.feature {
+
+    display: grid;
+    gap: 1.5rem;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__headline {
+        font-size: clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem);
+        font-weight: 800;
+        color: var(--c-blue);
+        line-height: 1;
+    }
+
+    &__description {
+        font-size: var(--f-body);
+        font-weight: 400;
+        color: var(--c-gray);
+        line-height: 1.7;
+
+        &--button {
+            margin-block-start: 1.5rem;
+            display: inline-block;
+            justify-self: start;
+            padding: 12px 33px;
+            background-color: var(--c-red);
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--c-white);
+            font-size: var(--f-body);
+            line-height: 1.7;
+            letter-spacing: 4.4px;
+            font-weight: 500;
+    
+            &:hover {
+                background-color: var(--c-blue);
+                cursor: pointer;
+            }
+    }
+}
+
+}
+
+// CSS for desktop version
+@media (width > 550px) {
+.feature {
+
+    &__description {
+        position: relative;
+
+        &--button {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+}
+
+.new {
+    background-color: var(--c-blue);
+    padding: 1.5rem 1.25rem;
+
+    & h2 {
+        font-size: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
+        line-height: 1;
+        color: var(--c-yellow);
+        font-weight: 700;
+        margin-block-end: 2rem;
+    }
+
+    &__posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--under:not(:last-child) {
+            border-bottom: 1px solid var(--c-gray);
+        }
+    }
+
+    & .post {
+
+        &__headline {
+            font-weight: 800;
+            font-size: var(--f-s);
+            line-height: 1.2;
+            margin-block-start: 1rem;
+
+            & a {
+                color: var(--c-white);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--c-yellow);
+                }
+            }
+        }
+
+        &__description {
+            color: var(--c-gray);
+            font-size: var(--f-body);
+            line-height: 1.7;
+            margin-block-end: 1.8rem;
+        }
+    }
+}
+
+// CSS for desktop version
+@media (width > 375px) {
+
+}
+
+.blog {
+    padding-bottom: 2rem;
+
+    .blog-stories {
+        display: grid;
+        gap: 2rem;
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 24px;
+    
+            &__box {
+    
+                &--ordinal  {
+                    text-decoration: none;
+                    font-size: var(--f-m);
+                    font-weight: 700;
+                    color: var(--c-silver);
+                }
+    
+                &--headline {
+                    color: var(--c-blue);
+                    font-size: var(--f-xs);
+                    line-height: 2.5;
+
+                    &:hover {
+                        color: var(--c-red);
+                        cursor: pointer;
+                    }
+                }
+    
+                &--description {
+                    color: var(--c-gray);
+                    font-size: var(--f-body);
+                    line-height: 1.6;
+                }
+            }
+        }
+
+    }
+}

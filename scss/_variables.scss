@@ -1,0 +1,18 @@
+:root {
+
+    //Colors
+    --c-white: #FFFDFA;
+    --c-blue: #00001A;
+    --c-gray: #5E607A;
+    --c-red: #F15D51;
+    --c-silver: #C5C6CE;
+    --c-yellow: #E9AA52;
+
+    //Font sizes 
+    --f-xl: clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem); // 56px 40px
+    --f-l: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem); //40px 32px 
+    --f-m: 2rem; // 32px
+    --f-s: 1.25rem; // 20px
+    --f-xs:  1.125rem; // 18px
+    --f-body: 0.9rem; //15px
+}
