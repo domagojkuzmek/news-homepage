@@ -11,11 +11,11 @@ window.addEventListener("DOMContentLoaded", () => {
     if(windowWidth < 740) {
         navigation.classList.add("visibility");
     }
-    // On hmaburger icon show navigation
+    // On hamburger icon click show navigation
     btnOpener.addEventListener("click", () => {
         navigation.classList.toggle("visibility");
     })
-    // On remove icon hides the navigation
+    // On remove icon click hides the navigation
     btnCloser.addEventListener("click", () => {
         navigation.classList.toggle("visibility");
     })
